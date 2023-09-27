@@ -234,8 +234,9 @@
     <img src="images/Group 48096304.png" width="200px" height="auto">
   </div>
   <div id="main">
-    <img class="icon" style="animation-delay: -0.54s; animation-duration: 2.16s" height="250"
-      src="images/Group 48096288.png" width="300" onclick="showImage('images/H7KchUKw.jpeg')">
+    <img class="icon" style="animation-delay: -.54s; animation-duration: 2.16s" height="250"
+    src="images/Group 48096288.png" width="300" onclick="showWaveEmoji()">
+  
       <br>
     <img class="icon-project" style="animation-delay: -2.4s; animation-duration: 2.24s" height="100"
     src="images/project-tile.png" width="625" id="button">
@@ -279,6 +280,39 @@
   </div>
   <script src="//embed.typeform.com/next/embed.js"></script>
   <script>
+
+function showWaveEmoji() {
+  // Create a new text node with the wave emoji
+  const waveEmoji = document.createTextNode('👽');
+
+  // Create a <span> element to contain the emoji
+  const emojiContainer = document.createElement('span');
+  emojiContainer.style.position = 'fixed';
+  emojiContainer.style.top = '50%';
+  emojiContainer.style.left = '50%';
+  emojiContainer.style.transform = 'translate(-50%, -50%)';
+  emojiContainer.style.zIndex = '9999';
+  emojiContainer.style.fontSize = '48px'; // You can adjust the font size as needed
+  emojiContainer.style.opacity = '1'; // Initial opacity
+
+  // Append the emoji text node to the container
+  emojiContainer.appendChild(waveEmoji);
+
+  // Append the container to the body
+  document.body.appendChild(emojiContainer);
+
+  // Set a timeout to fade out and remove the emoji after 2 seconds
+  setTimeout(function () {
+    emojiContainer.style.opacity = '0'; // Set opacity to 0 for fade-out effect
+    setTimeout(function () {
+      emojiContainer.remove(); // Remove the emoji after the fade-out
+    }, 500); // Adjust the time for the fade-out effect as needed
+  }, 2000); // Time before starting the fade-out (2 seconds)
+}
+
+
+
+
     function showImage(src) {
       const popup = document.getElementById('image-popup');
       const popupImage = document.getElementById('popupImage');
