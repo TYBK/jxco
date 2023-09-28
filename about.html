@@ -188,6 +188,18 @@
       text-decoration: none;
     }
 
+    .footer-tag {
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 20px;
+    color: #B2B2B2;
+    font-size: 12px;
+    /* center on screen */
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+
   /* media queries */
   @media screen and (max-width: 600px) {
     #main {
@@ -234,7 +246,7 @@
       src="images/about-caption.png"  width="500" onclick="showImage('images/about-caption.png')">
         <br>
         <img class="icon" style="animation-delay: -1.8s; animation-duration: 2.64s" height="auto"
-        src="images/studio.jpg"  width="650" onclick="showImage('images/studio.png')">
+        src="images/studio.jpg"  width="650" onclick="showImage('images/studio.jpg')">
   </div>
   
 
@@ -255,6 +267,9 @@
       <button id="password-button" onclick="checkPassword()">Submit</button>
     </div>
   </div>
+  <footer>
+    <div class="footer-tag">JX & Co</div>
+  </footer>
   <script src="//embed.typeform.com/next/embed.js"></script>
   <script>
     function showImage(src) {

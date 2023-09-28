@@ -188,6 +188,18 @@
       text-decoration: none;
     }
 
+    .footer-tag {
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 20px;
+    color: #B2B2B2;
+    font-size: 12px;
+    /* center on screen */
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+
   /* media queries */
   @media screen and (max-width: 600px) {
     #main {
@@ -256,6 +268,9 @@
       <button id="password-button" onclick="checkPassword()">Submit</button>
     </div>
   </div>
+  <footer>
+    <div class="footer-tag">JX & Co</div>
+  </footer>
   <script src="//embed.typeform.com/next/embed.js"></script>
   <script>
     function showImage(src) {
