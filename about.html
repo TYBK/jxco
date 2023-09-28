@@ -36,7 +36,7 @@
 
     #main {
       text-align: right;
-      margin-top: 150px;
+      margin-top: -100px;
       padding-bottom: 150px;
     }
 
@@ -166,12 +166,14 @@
     background-color: #2c2c2c;
   }
 
+
         /* Styles for the breadcrumb navigation menu */
         .breadcrumbs {
       text-align: start;
       margin-left: 20px;
-      margin-top: 220px;
+      margin-top: 380px;
       margin-bottom: 50px;
+      z-index: 9999;
     }
   
     .breadcrumb {
@@ -207,7 +209,7 @@
   @media screen and (max-width: 600px) {
     #main {
       text-align: center;
-      margin-top: 150px;
+      margin-top: 10px;
     }
 
     #main .icon {
@@ -231,11 +233,11 @@
   <div class="intro-id">
     <img src="images/id-tile.png" width="200px" height="auto">
   </div>
+  <div class="breadcrumbs">
+    <span class="breadcrumb"><a href="index.html">Home</a></span> /
+    <span class="breadcrumb">About</span>
+  </div>
   <div id="main">
-    <div class="breadcrumbs">
-        <span class="breadcrumb"><a href="index.html">Home</a></span> /
-        <span class="breadcrumb">About</span>
-      </div>
       <img class="icon" style="animation-delay: -.54s; animation-duration: 2.16s" height="auto"
       src="images/intro-tile.png" width="300" onclick="showWaveEmoji()">
       <br>
