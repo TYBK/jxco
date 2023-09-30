@@ -208,6 +208,7 @@
     justify-content: center;
     display: flex;
     font-family: arial, helvetica, sans-serif;
+    cursor: pointer;
   }
 
   /* media queries */
@@ -312,7 +313,7 @@
     </div>
   </div>
   <footer>
-    <div class="footer-tag">JX & Co</div>
+    <div class="footer-tag" onclick="showTekaEmoji()">JX & Co</div>
   </footer>
   <script src="//embed.typeform.com/next/embed.js"></script>
   <script>
@@ -344,6 +345,28 @@ function showWaveEmoji() {
       emojiContainer.remove(); // Remove the emoji after the fade-out
     }, 500); // Adjust the time for the fade-out effect as needed
   }, 2000); // Time before starting the fade-out (2 seconds)
+}
+
+function showTekaEmoji() {
+  // Create an <img> element for the image
+  const emojiImage = document.createElement('img');
+  emojiImage.src = 'Images/teka.png'; // Set the image source
+
+  // Style the image element
+  emojiImage.style.position = 'fixed';
+  emojiImage.style.top = '50%';
+  emojiImage.style.left = '50%';
+  emojiImage.style.transform = 'translate(-50%, -50%)';
+  emojiImage.style.zIndex = '9999';
+  emojiImage.style.width = '100px'; // You can adjust the width as needed
+
+  // Append the image to the body
+  document.body.appendChild(emojiImage);
+
+  // Set a timeout to remove the image after 2 seconds
+  setTimeout(function () {
+    emojiImage.remove(); // Remove the image after 2 seconds
+  }, 2000);
 }
 
 
