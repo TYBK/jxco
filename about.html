@@ -16,6 +16,13 @@
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
+
+          // Log a page view event when the page loads
+    analytics.logEvent('page_view', {
+      page_location: 'https://jxandco.com/about.html', // Replace with the actual URL of your page
+      page_path: '/about.html', // Replace with the path of your page (e.g., /about or /products)
+      page_title: 'JX&Co About', // Replace with the title of your page
+    });
     </script>
   <style>
     body {
